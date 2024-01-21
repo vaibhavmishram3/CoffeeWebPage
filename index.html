@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+			box-sizing: border-box;
+			color: black;
+			font-family: sans-serif;
+		}
+		html,body{
+            /* position: relative; */
+			height: 100%;
+			width: 100%;
+			overflow-x: hidden;
+            /* z-index: 1; */
+		}
+		header{
+			padding: 3vw;
+			height: 100px;
+			width: 100vw;
+			display: flex;
+			background-color: #FFF7D8;
+			justify-content: space-between;
+			align-items: center;
+			position: fixed;
+			z-index: 1;
+		}
+		nav{
+			display: flex;
+			align-items: center;
+			grid-gap: 2vw;
+
+
+		}
+        nav h6{
+            transition: all ease .3s;
+            cursor: pointer;
+        }
+        nav h6:hover{
+            color: darkgreen;
+        }
+        #secnav h6:hover{
+            color: darkgreen;
+        }
+		#secnav{
+			display: flex;
+			align-items: center;
+			grid-gap: 2vw;
+		}
+		nav h2{
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: 2em;
+		}
+		nav h6{
+			font-size:1em;
+			font-weight: 100;
+		}
+		#secnav h6{
+			display: flex;
+			align-items: center;
+			font-size:1em;
+			gap:5px;
+			font-weight: 100;
+            transition: all ease .3s;
+            cursor: pointer;
+		}
+		#secnav input{
+			padding: .8vw;
+			border:none;
+			background-color: black;
+			color: white;
+			cursor: pointer;
+			transition: all ease .3s;
+		}
+		#secnav input:hover{
+			background-color:darkgreen;
+		}
+		i{
+
+			font-size: 2vw;
+		}
+		#page1{
+
+			overflow: hidden;
+			position: relative;
+		}
+		#page1 img{
+			width: 100vw;
+			height: 100vh;
+			object-fit: cover;
+		}
+		#page1 h1{
+
+			position: absolute;
+			top: 0;
+			color: white;
+			width: 60%;
+			font-size: 7vw;
+			padding: 10vw 3vw;
+			font-weight: 500;
+			
+			}
+			#page1 input{
+				position: absolute;
+				right: 5%;
+				bottom: 10%;
+				border:none;
+				padding: 2vw;
+				width: 25%;
+				background-color: #FFF7D8;
+				font-size: 3vw;
+				transition: all ease .3s;
+				cursor: pointer;
+			}
+			#page1 input:hover{
+				background-color: green;
+				color: white;
+			}
+
+			#page2 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 80vh;
+				font-size: 2.8vw;
+			}
+
+			#page2 p{
+				width: 50%;
+				text-align: center;
+			}
+
+			#page3 {
+				width: 100vw;
+				min-height: 100vh;
+				background-color: #FFF7D8;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 50px;
+				
+			}
+			#page3 h2{
+				font-size: 3.5vw;
+				font-weight: 500;
+				display: inline-block;
+			}
+			#page3 #bordercont{
+				display: flex;
+				justify-content: space-around;
+				min-height: 50vh;
+				width: 90vw;
+				/*border:2px solid black;*/
+				padding: 2vw 0vw; 
+			}
+			#page3 #border{
+				height: 500px;
+				width: 400px;
+				/*border:2px solid red;*/
+
+
+
+			}
+			#page3 #border img{
+				height: 300px;
+				width: 390px;
+				object-fit: cover;
+
+			}
+			#page3 #text{
+				padding: 2vw 0vw;
+			}
+
+			#page3 #text h4{
+				font-size: 2.5vw;
+				font-weight: 500;
+			}
+
+			#page3 #text p{
+				padding: 1vw 0vw;
+			}
+			#page4 img{
+				height: 90vh;
+				object-fit: cover;
+			}
+
+			#page5{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 4vw;
+				min-height: 100vh;
+				width: 100vw;
+				padding: 6vw 0vw;
+			}
+			#page5 #img{
+				height: 80%;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			#page5 h2{
+				font-size: 3vw;
+				font-weight: 100;
+			}
+			#page5 #img div{
+				height: 400px;
+				width:350px;
+				/*background-color: red;*/
+			}
+			#page5 #img div img{
+				width: 100%;
+
+			}
+			#page5 input{
+				border:1px solid black;
+				padding: 1.5vw;
+				width: 350px;
+				font-size: 3vw;
+				font-weight: 400;
+				background-color: #FFF7D8;
+				transition: all ease .3s;
+				cursor: pointer;
+
+			}
+			#page5 input:hover{
+				background-color: darkgreen;
+				color: white;
+
+			}
+			footer{
+				height: 100vh;
+				width: 100vw;
+				background-color: #D2E1EE;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			footer #up{
+				padding: 10vh 0;
+				height: 80%;
+				display: flex;
+				justify-content: space-around;
+				background-color: #D2E1EE;
+
+			}
+			footer #up #left{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				/*background-color: ;*/
+			}
+
+			footer #up #left h2, footer #up #right #rup h2{
+				font-size: 2vw;
+				font-weight: 100;
+			}
+				footer #up #right{
+				display: flex;
+				flex-direction: column;
+				
+				/*background-color: green;*/
+				justify-content: space-between;
+			}
+			footer #left p, footer #right p{
+				font-size: 1.3vw;
+				font-weight: 100;
+                cursor: pointer;
+			}
+			footer #right #rup h2{
+				padding: 1vw 0vw;
+				/*background-color: red;*/
+			}
+			footer #right #rdown div{
+				/*background-color: red;*/
+				display: flex;
+				justify-content: center;
+			}
+			footer #right #rdown input{
+				height: 7.1vh;
+				border: 2px solid black;
+				padding: 1vw;
+				font-size: 1.2vw;
+				/*background-color: red;*/
+			}
+			footer #right #rdown input[type="button"]{
+				background-color: black;
+				color: white;
+				width: 130px;
+				border: none;
+                cursor: pointer;
+				transition: all ease .3s;
+
+			}
+			footer #right #rdown input[type="button"]:hover{
+				background-color: darkgreen;
+				color: white;
+			}
+			footer #right #rdown input[type="text"]{
+				width: 400px;
+				background-color: transparent;
+			}
+			footer #right #rdown input[type="text"]:hover{
+				border: none;
+				border-bottom: 1px solid black;
+			}
+			footer #down{
+				width: 100%;
+				height:70px;
+				/*background-color: red;*/
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				font-size: 1vw;
+			}
+			footer #dup
+			{
+				padding: .8vw;
+				width: 70%;
+				display: flex;
+				justify-content: space-evenly;
+			}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<header>
+			<nav>
+			<h2>brew</h2>	
+			<h6>Shop</h6>
+			<h6>About</h6>
+			<h6>Location & Hours</h6>
+			</nav>
+			<div id="secnav">
+				<h6><i class="ri-account-circle-fill"></i>Log In</h6>
+				<h6>Cart(0)</h6>
+				<input type="button" name="" value="Order Online">
+
+			</div>
+		</header>
+		<div id="page1">
+			<img src="https://static.wixstatic.com/media/c837a6_92e0451a84214884a2f4efe4226d6c2f~mv2.jpg/v1/fill/w_1121,h_717,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_92e0451a84214884a2f4efe4226d6c2f~mv2.jpg" >
+			<h1>FOR THE LOVE OF COFFEE</h1>
+			<input type="button" name="" value="Shop Blends">
+		</div>
+		<div id="page2">
+			<p>Globally sourced but locally brewed our flavorful, full-bodied roasts taste as good as they smell.</p>
+		</div>
+		<div id="page3">
+			<h2>GRAB IT ON THE GO</h2>
+			<div id="bordercont">
+				<div id="border">
+					<img src="https://www.eatloveeats.com/wp-content/uploads/2021/10/Sticky-Toffee-Pudding-Mug-Cake-9.jpg">
+					<div id="text">
+						<h4>Espresso</h4>
+					<p>Describe your image here. Use catchy text to tell people the story behind the photo.Go to “Manage Media” to add your content.</p>
+					</div>
+				</div>	
+				<div id="border">
+					<img src="https://www.eatloveeats.com/wp-content/uploads/2021/10/Sticky-Toffee-Pudding-Mug-Cake-9.jpg">
+					<div id="text">
+						<h4>Espresso</h4>
+					<p>Describe your image here. Use catchy text to tell people the story behind the photo.Go to “Manage Media” to add your content.</p>
+					</div>		
+				</div>	
+				<div id="border">
+					<img src="https://www.eatloveeats.com/wp-content/uploads/2021/10/Sticky-Toffee-Pudding-Mug-Cake-9.jpg">
+					<div id="text">
+						<h4>Espresso</h4>
+					<p>Describe your image here. Use catchy text to tell people the story behind the photo.Go to “Manage Media” to add your content.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page4">
+			<img src="https://static.wixstatic.com/media/c837a6_6d76103ea529451fbe00ee270c1f59ea~mv2.jpg/v1/fill/w_980,h_884,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_6d76103ea529451fbe00ee270c1f59ea~mv2.jpg" width="100%">
+		</div>
+		<div id="page5">
+			<h2>DELIVERED FRESH</h2>
+			<div id="img">
+				<div id="img1">
+					<img src="https://static.wixstatic.com/media/84770f_1cea87595f6c4d37899d07370562089c~mv2.jpg/v1/fill/w_210,h_210,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_1cea87595f6c4d37899d07370562089c~mv2.jpg">
+					<h4>Blend 01</h4>
+					<p>$85.00</p>
+				</div>
+				<div id="img2">
+					<img src="https://static.wixstatic.com/media/c837a6_1e65da23334f4eb8bafd875a483ef48e~mv2.jpg/v1/fill/w_210,h_210,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c837a6_1e65da23334f4eb8bafd875a483ef48e~mv2.jpg">
+					<h4>Blend 01</h4>
+					<p>$85.00</p>
+				</div>
+				<div id="img3">
+					<img src="https://static.wixstatic.com/media/84770f_c97947e9a07e4991bc824fe6510f9376~mv2.jpg/v1/fill/w_210,h_210,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_c97947e9a07e4991bc824fe6510f9376~mv2.jpg">
+					<h4>Blend 01</h4>
+					<p>$85.00</p>
+				</div>
+				<div id="img4">
+					<img src="https://static.wixstatic.com/media/84770f_c97947e9a07e4991bc824fe6510f9376~mv2.jpg/v1/fill/w_210,h_210,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_c97947e9a07e4991bc824fe6510f9376~mv2.jpg">
+					<h4>Blend 01</h4>
+					<p>$85.00</p>
+				</div>
+			</div>
+			<input type="button" name="" value="Shop All">
+		</div>
+		<footer>
+			<div id="up">
+				<div id="left">
+					<h2>COME VISIT US</h2>
+					<div id="place">
+						<p>500 TERRY FRANCINE STREET
+							<br>SAN FRANCISCO, CA 94158</p>
+					</div>
+					<div id="time">
+						<p>MON - FRI: 8AM - 8PM</p>
+						<p>MON - FRI: 8AM - 8PM</p>
+						<p>MON - FRI: 8AM - 8PM</p>
+					</div>
+					<div id="media">
+						<p>Instagram</p>
+						<p>Facebook</p>
+						<p>Twitter</p>
+					</div>
+				</div>
+				<div id="right">
+					<div id="rup">
+						<h2>TALK TO US</h2>
+						<p>INFO@MYSITE.COM<br>123 456 6780</p>
+					</div>
+					<div id="rdown">
+						<p>Subsribe to our Newsletter</p>
+						<div>
+							<input  type="text" name="" placeholder="Email address">
+							<input type="button" name="" value="Subscribe">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="down">
+				<div id="dup">
+					<p>TERMS & CONDITIONS</p>
+					<p>PRIVACY POLICY</p>
+					<p>SHIPPING POLICY</p>
+					<p>REFUND POLICY</p>
+					<p>COOKIE POLICY</p>
+				</div>
+				<div id="ddown">
+					<p>© 2035 by BREW. Powered and secured by Wix</p>
+				</div>
+			</div>
+				
+		</footer>
+	</div>
+</body>
+</html>
